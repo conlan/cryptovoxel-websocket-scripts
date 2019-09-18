@@ -120,11 +120,7 @@ function refresh_market(parcel, asset_contract_address) {
         opensea_base_url
 
     console.log(url)
-    options = {
-        headers: {
-            "X-My-Header": "This is a custom header field"
-        }
-    }
+    
     // TODO use API key in header
     fetch(url, {
             headers: {
