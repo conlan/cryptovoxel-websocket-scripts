@@ -157,13 +157,14 @@ function refresh_market(parcel, asset_contract_address) {
             // console.log(sorted_assets)
 
             // Assets are sorted by cheapest -> expensive
-            // Set the cheap images first
+            // Set cheap images first
             var asset_index = set_image_urls(p, sorted_assets, 0, cheap_images)
-            // now set the expensive images
+            // now set expensive images
             asset_index = set_image_urls(p, sorted_assets, asset_index, expensive_images);
         })
 }
 
+// Set the url for a list of NFT image features and return the updated asset index
 function set_image_urls(parcel, assets, asset_index, image_ids) {
     for (i = 0; i < image_ids.length; i++) {
         let image = parcel.getFeatureById(image_ids[i])
